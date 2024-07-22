@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji POC</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #hiddenEmoji {
+            display: none;
+            font-size: 48px;
+            position: fixed;
+            bottom: 20px; /* Adjusted the distance from the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 767px) {
+            button {
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button to trigger emoji -->
+    <button onclick="showEmoji()">Click me</button>
+
+
+
+    
+    <!-- Emoji element -->
+    <div id="hiddenEmoji">💋</div>
+
+    <script>
+        function showEmoji() {
+            var emoji = document.getElementById('hiddenEmoji');
+            emoji.style.display = 'inline'; // Show the emoji
+
+            setTimeout(function () {
+                emoji.style.display = 'none'; // Hide the emoji after 3 seconds
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>

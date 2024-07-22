@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bday</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background: url('rej.jpg') center/cover no-repeat; /* Set the background image */
+            color: white;
+        }
+
+        .question-container {
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #d6d8db;
+            border-radius: 10px;
+            background-color: #ffffff;
+            margin: auto; /* Center the container horizontally */
+            margin-top: 50px; /* Add margin at the top */
+            margin-bottom: 20px; /* Add margin at the bottom */
+            text-align: center; /* Center the text */
+        }
+
+        .question-container h5 {
+            color: black;
+        }
+
+        .container-fluid {
+            margin-top: auto; /* Push the container to the bottom */
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="question-container">
+       
+        <h5>Aight bro, nothing but respect, have a good time &#x1F44D;&#x1F44D;&#x1F44D;</h5>       
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-left">
+                <!-- Back button -->
+                <button onclick="back()" class="btn btn-primary" style="margin-top: -840px;">Back</button>
+            </div>
+          
+        </div>
+    </div>
+   
+
+    <script>
+        function yes() {
+            // Redirect to yes.html
+            window.location.href = 'index.html';
+        }
+        function back() {
+            // Redirect to yes.html
+            window.location.href = 'que3.html';
+        }
+        function no() {
+            // Redirect to no.html
+            window.location.href = 'Index.html';
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

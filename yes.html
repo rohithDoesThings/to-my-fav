@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vamoss</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <style>
+        body {
+            background: url('yesp.jpg') center/cover no-repeat; /* Set the background image */
+            color: white;
+            margin: 0;
+        }
+
+        /* Add styles for the image, set initial display to none */
+        .hiddenImage {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Center the image using flexbox */
+        .center-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        /* Style for the container holding the paragraphs */
+        .paragraph-container {
+            background-color: #ffffff;
+            /* Box background color */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            /* Add some margin */
+            color: black;
+            /* Set font color to black */
+        }
+
+        /* Style for the bottom fixed container */
+        .bottom-container {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column justify-content-between">
+    <div class="container mt-4 pt-4 flex-grow-1">
+        <div class="text-center">
+            <h1>Happy 20th Birthday <span style="color: darkblue;">&#x1F499;</span></h1>
+
+            <!-- Box for the paragraphs -->
+            <div class="paragraph-container">
+                <p>Hey! It's been a while, and I hope life is treating you well. Can't believe you're 20 now –
+                    happy birthday! I genuinely wish you all the best. Just don't try anything stupid, longevity is the
+                    key, after all.
+                    <p></p>
+                    Keep going bro, thing's most special about you is the pace u live and You got that special gift and just keep going, Keep that momentum going, the world will
+                    adjust for you.
+<p></p>
+                    Well well.......mff I would give u a bigg slapp(jk) and then and a few big hugs for going on a god
+                    mode of not talking anymore. You're like a grumpy cat sometimes, but that's part of your charm. But yea youre my
+                    homie  
+<p></p>
+                    
+<p></p>
+                    And by the way, I got two hamsters recently – they're as precious and cute as you are. Mistakes are unpredictable and we're now strangers, but you deserve all the love this world has to offer, yo u deserve it all. My old best friend, gf, alabama sibling, youre def like a family to me and i love you, have a good day<p></p>Aight get
+                    outta here now.</p>
+                <!-- ... (existing paragraphs) ... -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Centered container for the images -->
+    <div class="center-container">
+        <img class="hiddenImage" src="one.jpg" alt="Image 1">
+        <img class="hiddenImage" src="two.jpg" alt="Image 2">
+        <img class="hiddenImage" src="three.jpg" alt="Image 3">
+        <img class="hiddenImage" src="four.jpg" alt="Image 4">
+        <img class="hiddenImage" src="five.jpg" alt="Image 5">
+        <img class="hiddenImage" src="six.jpg" alt="Image 6">
+        <img class="hiddenImage" src="seven.jpg" alt="Image 7">
+    </div>
+
+    <!-- Container for the bottom buttons with added Bootstrap utility classes -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-left">
+                <!-- Back button -->
+                <button onclick="back()" class="btn btn-secondary">Back</button>
+            </div>
+            <div class="col text-center">
+                <button onclick="rate()" class="btn btn-primary">Rating</button>
+            </div>
+            <div class="col text-right">
+                <!-- Move Next button to the right side -->
+                <button onclick="next()" class="btn btn-primary">Next</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <div></div>
+
+    <script>
+        let images = document.querySelectorAll('.hiddenImage');
+        let currentImageIndex = 0;
+
+        function rate() {
+            window.location.href = "table.html";
+        }
+
+        function back() {
+            window.location.href = 'que.html';
+        }
+
+        function next() {
+            window.location.href = 'yes2.html';
+        }
+
+        function showImage() {
+            // Show the current image
+            images[currentImageIndex].style.display = 'block';
+
+            // Set a timeout to hide the image after 5 seconds
+            setTimeout(hideImage, 5000);
+        }
+
+        function hideImage() {
+            // Hide the current image
+            images[currentImageIndex].style.display = 'none';
+
+            // Increment the index for the next image
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+
+            // Call the showImage function for the next image
+            setTimeout(showImage, 15000);
+        }
+
+        // Set a timeout to call the showImage function after 15 seconds
+        setTimeout(showImage, 15000);
+
+        // Show bottom container when scrolled to the bottom
+        window.addEventListener('scroll', function () {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                document.querySelector('.bottom-container').style.display = 'flex';
+            } else {
+                document.querySelector('.bottom-container').style.display = 'none';
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
