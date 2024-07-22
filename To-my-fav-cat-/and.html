@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ily</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            color: white;
+            margin: 0;
+            overflow: hidden; /* Disable scrolling */
+        }
+
+        #hiddenEmoji {
+            display: none;
+            font-size: 98px;
+            position: fixed;
+            bottom: 60px; /* Adjusted the distance from the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Add styles for the image, set initial display to none */
+      #hiddenImage {
+    display: none;
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    z-index: 10000; /* Increase the z-index to ensure it's above other elements */
+    color: #ff4d88;
+}
+
+
+        /* Center the image using flexbox */
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Style for the container holding the paragraphs */
+        .paragraph-container {
+            background-color: #ffffff; /* Box background color */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px; /* Add some margin */
+            color: black; /* Set font color to black */
+        }
+
+        
+
+        /* Style to center the video on mobile devices */
+        @media (max-width: 767px) {
+            video {
+                width: 100%;
+                max-width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+                display: block;
+            }
+        }
+
+        .fixed-bottom-right {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column justify-content-between">
+    <div class="container mt-4 pt-4 flex-grow-1">
+        <div class="text-center">
+            <!-- Box for the paragraphs -->
+            <div class="paragraph-container">
+                <p>I'll see you tmrw on lunch....&#x1F5A4;</p>
+                <!-- ... (additional paragraphs) ... -->
+            </div>
+
+            <!-- Video element -->
+            <video width="640" height="360" controls>
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="container-fluid fixed-bottom">
+        <button onclick="back()" class="btn btn-secondary mt-auto">Back</button>
+        <button onclick="showEmoji()" class="btn btn-primary mt-auto">A Gift</button>
+    </div>
+    <div class="container-fluid">
+      <!-- <button onclick="back()" class="btn btn-secondary margin-left">Back</button> -->
+        <!-- <button onclick="showEmoji()" class="btn btn-primary  fixed-bottom-right">Come closer</button> -->
+    </div>
+
+    <div class="container-fluid fixed-bottom">
+
+        
+    </div>
+
+
+    <div id="hiddenEmoji">💋</div>
+
+
+
+
+    
+    <script>
+        function back() {
+            window.location.href = 'no.html';
+        }
+        function showEmoji() {
+            var emoji = document.getElementById('hiddenEmoji');
+            emoji.style.display = 'inline'; // Show the emoji
+
+            setTimeout(function () {
+                emoji.style.display = 'none'; // Hide the emoji after 3 seconds
+            }, 3000);
+        }
+      
+    </script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

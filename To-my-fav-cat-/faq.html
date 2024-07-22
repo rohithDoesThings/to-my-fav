@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Valentine's Day FAQ</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: url('nop.jpg') center/cover no-repeat; /* Set the background image */
+
+        }
+
+        .form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* 50% transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #e2e5eb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background-color: #e2e5eb;
+        }
+
+        h3 {
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .answer img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <div class="form-container">
+        <form>
+            <!-- Sample FAQ Item 1 -->
+            <div class="faq-item" onclick="toggleAnswer('answer1')">
+                <h3>sona's fav childhood snack</h3>
+                <div class="answer" id="answer1">
+                    <img src="roa.jpg" alt="Heart Image">
+                </div>
+            </div>
+
+
+            <div class="faq-item" onclick="toggleAnswer('answer7')">
+                <h3>Favourite actor and also biggest fear</h3>
+                <div class="answer" id="answer7">
+                    <img src="vis.jpg" alt="Heart Image">
+                </div>
+            </div>
+
+            <!-- Sample FAQ Item 2 -->
+            <div class="faq-item" onclick="toggleAnswer('answer2')">
+                <h3>Me when you don't text</h3>
+                <div class="answer" id="answer2">
+                    <img src="dontlook.jpg" alt="Heart Image">
+                </div>
+            </div>
+
+            <!-- Sample FAQ Item 3 -->
+            <div class="faq-item" onclick="toggleAnswer('answer3')">
+                <h3>Me when you reply</h3>
+                <div class="answer" id="answer3">
+                    <img src="look.jpg" alt="Heart Image">
+                </div>
+            </div>
+
+            <!-- Sample FAQ Item 4 -->
+            <div class="faq-item" onclick="toggleAnswer('answer4')">
+                <h3>Me when youre mad at me</h3>
+                <div class="answer" id="answer4">
+                    <img src="handless.jpg" alt="Heart Image">
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer('answer5')">
+                <h3>Us riding on bike</h3>
+                <div class="answer" id="answer5">
+                    <img src="bike.jpg" alt="Heart Image">
+                </div>
+            </div>
+
+            <!-- Sample FAQ Item 6 -->
+            <div class="faq-item" onclick="toggleAnswer('answer6')">
+                <h3>How much I like you</h3>
+                <div class="answer" id="answer6">
+                    <img src="titan.jpg" alt="Heart Image">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Back button fixed to the bottom-left of the screen on mobile -->
+    <div class="back-button">
+        <button onclick="back()" class="btn btn-primary">Back</button>
+     
+    </div>
+
+    <script>
+        function toggleAnswer(answerId) {
+            var answer = document.getElementById(answerId);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+
+        function back() {
+            window.location.href = 'que.html';
+        }
+        function back1() {
+            window.location.href = 'yes2.html';
+        }
+    </script>
+</body>
+</html>
+ 
